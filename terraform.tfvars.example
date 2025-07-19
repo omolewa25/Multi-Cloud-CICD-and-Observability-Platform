@@ -43,3 +43,7 @@ slack_channel = "alerts"
 app_dashboard_url = "https://app.datadoghq.com/dashboard/xxxxxxxxx"
 tag_environment   = "env:prod"
 tag_service       = "service:webapp"
+
+# Splunk Integration
+splunk_hec_url   = "https://splunk.example.com:8088"
+splunk_hec_token = "your-splunk-hec-token"

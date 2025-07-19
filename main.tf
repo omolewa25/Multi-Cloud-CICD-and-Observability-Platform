@@ -45,4 +45,6 @@ module "observability" {
   datadog_app_key       = var.datadog_app_key
   aws_account_id        = var.aws_account_id
   datadog_aws_role_name = var.datadog_aws_role_name
+  slack_channel = ""
+  slack_account = ""
 }

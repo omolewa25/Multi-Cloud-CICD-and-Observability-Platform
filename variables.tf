@@ -32,3 +32,14 @@ variable "bastion_instance_type" {
   description = "EC2 instance type for the bastion host"
   type        = string
 }
+
+variable "splunk_hec_url" {
+  description = "Splunk HTTP Event Collector URL"
+  type        = string
+}
+
+variable "splunk_hec_token" {
+  description = "Splunk HTTP Event Collector token"
+  type        = string
+  sensitive   = true
+}
