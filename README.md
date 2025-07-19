@@ -1,3 +1,4 @@
+
 # Multi-Cloud CI/CD & Observability Platform
 
 ## Project Summary
@@ -15,10 +16,15 @@ Built to simulate real-world DevOps workflows in a modular, automated, and secur
 ## Project Structure
 ```
 ├── main.tf
+├── provider.tf
 ├── variables.tf
 ├── outputs.tf
-├── terraform.tfvars
+├── terraform.tfvars.example
 ├── backend.tf
+├── Makefile
+├── terraform-wrapper.sh
+├── .gitignore
+├── LICENSE
 ├── modules/
 │   ├── network/         # VPC, Subnets, Routing
 │   ├── compute/         # EC2, ALB, Lambda, IAM
@@ -75,15 +81,16 @@ cp terraform.tfvars.example terraform.tfvars
 # Fill in secrets and config values
 ```
 
-### 2. Terraform Init and Apply
+### 2. Use Makefile or Wrapper
 ```bash
-terraform init
-terraform workspace new dev
-terraform apply -auto-approve
-```
+make init
+make plan
+make apply
 
-### 3. Push to GitHub
-Triggers GitHub Actions workflow to apply infrastructure and validate with security tools.
+# or using shell wrapper
+./terraform-wrapper.sh init
+./terraform-wrapper.sh plan
+```
 
 ---
 
@@ -94,7 +101,7 @@ Triggers GitHub Actions workflow to apply infrastructure and validate with secur
 ---
 
 ## License
-MIT License
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
