@@ -14,3 +14,13 @@ variable "aws_account_id" {
 variable "datadog_aws_role_name" {
   type = string
 }
+
+variable "slack_account" {
+  description = "Slack account name configured in Datadog"
+  type        = string
+}
+
+variable "slack_channel" {
+  description = "Slack channel to send alerts"
+  type        = string
+}

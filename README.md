@@ -1,6 +1,8 @@
 
 # Multi-Cloud CI/CD & Observability Platform
 
+![Project Thumbnail](ci-cd.png)
+
 ## Project Summary
 This project delivers an enterprise-grade multi-cloud CI/CD pipeline and observability stack using **Terraform** to provision infrastructure across:
 
@@ -105,4 +107,4 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
-> Designed for learning, enterprise simulation, and advanced DevOps automation scenarios.
+> Designed for learning, enterprise simulation, and advanced DevOps automation scenarios.....
