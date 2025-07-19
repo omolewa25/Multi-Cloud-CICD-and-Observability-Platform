@@ -22,3 +22,13 @@ variable "datadog_api_key" {}
 variable "datadog_app_key" {}
 variable "aws_account_id" {}
 variable "datadog_aws_role_name" {}
+
+variable "bastion_ami_id" {
+  description = "AMI ID for the bastion host instance"
+  type        = string
+}
+
+variable "bastion_instance_type" {
+  description = "EC2 instance type for the bastion host"
+  type        = string
+}

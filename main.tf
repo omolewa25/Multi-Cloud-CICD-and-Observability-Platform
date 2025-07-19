@@ -8,15 +8,19 @@ module "network" {
 }
 
 module "compute" {
-  source              = "./modules/compute"
-  vpc_id              = module.network.vpc_id
-  public_subnets      = module.network.public_subnets
-  private_subnets     = module.network.private_subnets
-  ami_id              = var.ami_id
-  instance_type       = var.instance_type
-  key_name            = var.key_name
-  iam_instance_profile = var.iam_instance_profile
+  source                = "./modules/compute"
+  vpc_id                = module.network.vpc_id
+  public_subnets        = module.network.public_subnets
+  private_subnets       = module.network.private_subnets
+  ami_id                = var.ami_id
+  instance_type         = var.instance_type
+  key_name              = var.key_name
+  iam_instance_profile  = var.iam_instance_profile
+
+  bastion_ami_id        = var.bastion_ami_id
+  bastion_instance_type = var.bastion_instance_type
 }
+
 
 module "dns" {
   source        = "./modules/dns"

@@ -1,4 +1,3 @@
-
 variable "vpc_id" {
   type = string
 }
@@ -27,3 +26,12 @@ variable "iam_instance_profile" {
   type = string
 }
 
+variable "bastion_ami_id" {
+  type        = string
+  description = "AMI ID for the bastion host instance"
+}
+
+variable "bastion_instance_type" {
+  type        = string
+  description = "Instance type for the bastion host"
+}
