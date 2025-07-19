@@ -1,0 +1,24 @@
+
+variable "vpc_cidr" {}
+variable "public_subnet_cidrs" { type = list(string) }
+variable "private_subnet_cidrs" { type = list(string) }
+variable "azs" { type = list(string) }
+
+variable "ami_id" {}
+variable "instance_type" {}
+variable "key_name" {}
+variable "iam_instance_profile" {}
+
+variable "cloudflare_api_token" {}
+variable "domain" {}
+variable "record_name" {}
+
+variable "github_token" {}
+variable "github_owner" {}
+variable "github_repo" {}
+variable "aws_role_arn" {}
+
+variable "datadog_api_key" {}
+variable "datadog_app_key" {}
+variable "aws_account_id" {}
+variable "datadog_aws_role_name" {}
