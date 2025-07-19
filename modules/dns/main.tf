@@ -25,12 +25,15 @@ resource "cloudflare_page_rule" "cache" {
   }
 }
 
+resource "cloudflare_filter" "bad_bot_filter" {
+  zone_id    = cloudflare_zone.domain.id
+  expression = "(http.user_agent contains \"badbot\")"
+  description = "Filter for bad bots"
+}
+
 resource "cloudflare_firewall_rule" "basic_waf" {
-  zone_id  = cloudflare_zone.domain.id
+  zone_id     = cloudflare_zone.domain.id
+  filter_id   = cloudflare_filter.bad_bot_filter.id
   description = "Block bad bots"
-  filter {
-    expression = "(http.user_agent contains \"badbot\")"
-  }
-  filter_id = ""
-  action = "block"
+  action      = "block"
 }
